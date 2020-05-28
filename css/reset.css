@@ -1,0 +1,457 @@
+/*-----======Setup Color And Text======------*/
+:root {
+  --primary-bg-color: #33c4e8;
+  --primary-bg-color-right: #59d5f4;
+  --secondary-bg-color: #fafafa;
+  --primary-color: #414142;
+  --secondary-color: #000;
+  --title-item-size: 20px;
+  --primary-padding: 10px;
+  --secondary-padding: 20px;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{
+margin:0;
+padding:0;
+border:0;
+font-size:100%;
+font:inherit;
+vertical-align:baseline;
+}
+
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{
+display:block
+}
+
+body{
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  line-height:2em;
+  color:#333;
+}
+
+ol,ul{
+list-style:none
+}
+
+blockquote,q{
+quotes:none
+}
+
+blockquote:before,blockquote:after,q:before,q:after{
+content:'';
+content:none
+}
+
+table{
+border-collapse:collapse;
+border-spacing:0
+}
+
+.container {
+  max-width: 760px;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+progress {
+  width: 13em;
+}
+
+/*---Row---*/
+.row-divide {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.row-flex-start {
+  justify-content: flex-start;
+}
+
+.align--self--center {
+  align-self: center;
+}
+
+.divide--5-col {
+  flex: 0 0 20%;
+  max-width: 20%;
+  width: 100%;
+}
+
+.col-divide-1 {
+  flex: 0 0 7%;
+  max-width: 7%;
+  width: 100%;
+}
+
+.col-divide-2 {
+  flex: 0 0 14%;
+  max-width: 14%;
+  width: 100%;
+}
+
+.col-divide-3 {
+  flex: 0 0 22%;
+  max-width: 22%;
+  width: 100%;
+}
+
+.col-divide-4 {
+  flex: 0 0 33.33%;
+  max-width: 32%;
+  width: 100%;
+}
+
+.col-divide-5 {
+  flex: 0 0 42%;
+  max-width: 42%;
+  width: 100%;
+}
+
+.col-divide-6 {
+  flex: 0 0 50%;
+  max-width: 48%;
+  width: 100%;
+}
+
+.col-divide-7 {
+  flex: 0 0 57%;
+  max-width: 57%;
+  width: 100%;
+}
+
+.col-divide-8 {
+  flex: 0 0 65%;
+  max-width: 65%;
+  width: 100%;
+}
+
+.col-divide-9 {
+  flex: 0 0 73%;
+  max-width: 73%;
+  width: 100%;
+}
+
+.col-divide-10 {
+  flex: 0 0 81%;
+  max-width: 81%;
+  width: 100%;
+}
+
+.col-divide-11 {
+  flex: 0 0 90%;
+  max-width: 90%;
+  width: 100%;
+}
+
+.col-divide-12 {
+  flex: 0 0 100%;
+  max-width: 100%;
+  width: 100%;
+}
+
+.col-divide-mutan-5 {
+  flex: 0 0 19.5%;
+  max-width: 19.5%;
+  width: 100%;
+}
+
+/*---Row---*/
+
+/*---Position---*/
+/*---Center---*/
+.center--flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.center--position {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*---Title and paragraph---*/
+.title--section {
+  font-size: 25px;
+  font-weight: 600;
+  padding-top: 1rem;
+  margin-bottom: .5rem;
+  color: var(--primary-bg-color);
+}
+
+.title--item {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 1px 0px;
+}
+
+.section-heading {
+  margin-bottom: 30px;
+  background-color: #fff;
+  padding: 10px 25px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  border-left: 4px solid var(--primary-color);
+}
+
+.title--section--border {
+  border: 5px solid;
+  padding: var(--primary-padding) var(--secondary-padding);
+}
+
+.text--center {
+  text-align: center;
+}
+
+.text--justify {
+  text-align: justify;
+}
+
+.text--right {
+  text-align: right;
+}
+
+.text--italic {
+  font-style: italic;
+}
+
+/*border radius*/
+.border--solid-2 {
+  border: 2px solid #e0d717;
+}
+
+.border--top-solid-2 {
+  border-top: 2px solid var(--secondary-bg-color);
+}
+
+.border--1 {
+  border-radius: 8px;
+}
+
+.line--height {
+  line-height: 2rem;
+}
+
+.border--2 {
+  border-radius: 13px;
+}
+
+.border--3 {
+  border-radius: 17px;
+}
+
+.border--50 {
+  border-radius: 50%;
+}
+
+/*border radius*/
+.box-shadow {
+  box-shadow: 4px 2px 7px 3px #80808045;
+}
+
+.border-left {
+  padding-left: 25px;
+  border-left: 3px solid var(--primary-color);
+}
+
+.text--upcase {
+  text-transform: uppercase;
+}
+
+.d--block {
+  display: block;
+}
+
+.d--flex {
+  display: flex;
+  align-items: center;
+}
+
+.justify--content--end {
+  justify-content: flex-end;
+}
+
+.d--none {
+  display: none;
+}
+
+p {
+  padding-bottom: 5px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--secondary-bg-color);
+  transition: all 0.6s;
+}
+
+a:hover {
+  color: var(--primary-bg-color);
+}
+
+/*---Title---*/
+/*---Back to top---*/
+#buttonBackToTop {
+  display: inline-block;
+  background-color: #4c8a399c;
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 15px;
+  transition: background-color .3s, opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+  border-radius: 10px;
+  box-shadow: 1px 1px 20px 4px #4c8a3957;
+}
+
+#buttonBackToTop::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 25px;
+  line-height: 45px;
+  color: #ffffff80;
+}
+
+#buttonBackToTop:hover {
+  cursor: pointer;
+  background-color: var(--primary-bg-color);
+}
+
+#buttonBackToTop:hover:after {
+  color: #fff;
+}
+
+#buttonBackToTop:active {
+  background-color: #555;
+}
+
+#buttonBackToTop.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.btn--Navbar {
+  display: none;
+}
+
+.navbar-header.toggle {
+  display: none;
+}
+
+/*---padding and margin---*/
+.py-40 {
+  padding: 40px 0px;
+}
+
+.py-30 {
+  padding: 30px 0px;
+}
+
+.py-20 {
+  padding: 20px 0px;
+}
+
+.py-15 {
+  padding: 20px 0px;
+}
+
+.p-20 {
+  padding: 20px;
+}
+
+.p-12 {
+  padding: 12px;
+}
+
+.py-12 {
+  padding: 12px 0px;
+}
+
+.px-10 {
+  padding: 0px 10px;
+}
+
+.px-30 {
+  padding: 0px 30px;
+}
+
+.mx-5 {
+  margin: 0px 5px;
+}
+
+.mxr-5 {
+  margin-right: 5px;
+}
+
+.mxr-15 {
+  margin-right: 15px;
+}
+
+.py-65-px-30 {
+  padding: 65px 30px;
+}
+
+.mx-15 {
+  margin: 0px 15px;
+}
+
+.mx-35 {
+  margin: 0px 35px;
+}
+
+.my-6 {
+  margin: 6px 0px;
+}
+
+.my-12 {
+  margin: 12px 0px;
+}
+
+.my-20 {
+  margin: 20px 0px;
+}
+
+.my-40 {
+  margin: 40px 0px;
+}
+
+.myt-20 {
+  margin-top: 20px;
+}
+
+.myt-50 {
+  margin-top: 50px;
+}
+
+.mr-auto {
+  margin: auto;
+}
+
+/*---padding and margin---*/
+.border--solid-1 {
+  border: 0.5px solid #b5b3b3;
+}

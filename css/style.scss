@@ -1,0 +1,207 @@
+@font-face {
+	font-family:'Rig Bold Coarse';
+	src:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/Rig-BoldCoarse.otf');
+}
+
+@font-face {
+	font-family:'Rig Bold Extrude';
+	src:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/Rig-BoldExtrude.otf');
+}
+
+@font-face {
+	font-family:'Rig Bold Shadow';
+	src:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/Rig-BoldShadow.otf');
+}
+
+@font-face {
+	font-family:'Rig Bold Face';
+	src:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/Rig-BoldFace.otf');
+}
+
+@font-face {
+	font-family:'Rig Bold Inline';
+	src:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/Rig-BoldInline.otf');
+}
+
+$red: #fe4560;
+$blue: #98b5cc;
+$face: #91d4ff;
+$flourish: #fff;
+$shadowdots: #040351;
+$shadow: #4d8bea;
+$shadow2: #cbc7e3;
+
+@mixin section--width($width, $float){
+  width: $width;
+  float: $float;
+}
+
+.header{
+  background: linear-gradient(to right, var(--primary-bg-color) 0, var(--primary-bg-color-right) 100%);
+  height: 6em;
+  width: 100%;
+  .header--contain{
+    float:right;
+    margin: 1.5em 2em 0 0;
+    // .title-section{
+    //   text-shadow: 2px -1px;
+    // font-weight: 700;
+    // font-size: xx-large;
+    // color: var(--secondary-bg-color);
+    // font-family: serif;
+    // text-transform: uppercase;
+    // }
+    h1{
+      font-family: 'Rig Bold Face', sans-serif;
+    	text-transform: uppercase;
+    	font-size: 2em;
+    	text-align: center;
+    	font-weight: normal;
+    	margin: 0;
+    	transform: translate(-40%, 0%);
+    	position: absolute;
+    	color: $flourish;
+
+    	&:before,
+    	&:after,
+    	span:before,
+    	span:after {
+    		content: attr(data-heading);
+    		position: absolute;
+    		overflow: hidden;
+    		left: 0;
+    		top: 0;
+    		width: 100%;
+    		z-index: 5;
+    		font-weight: normal;
+    		text-shadow: none;
+    	}
+
+    	&:before {
+     		color: $flourish;
+     		font-family: 'Rig Bold Inline', sans-serif;
+    	}
+
+    	&:after {
+     		font-family: 'Rig Bold Coarse', sans-serif;
+     		color: $shadowdots;
+    	}
+    }
+    .header-content{
+      text-transform: uppercase;
+      transform: translate(0%, 80%);
+      font-style: italic;
+      color: var(--secondary-bg-color);
+    }
+  }
+}
+
+span {
+	&::before {
+		font-family: 'Rig Bold Shadow', sans-serif;
+		color: $shadow2;
+		z-index: -1;
+	}
+
+	&::after {
+		font-family: 'Rig Bold Extrude', sans-serif;
+		color: $shadow;
+		z-index: -1;
+	}
+}
+.fa{
+  padding: .3rem;
+    background: var(--primary-bg-color);
+    border-radius: 50%;
+}
+
+.main--contain{
+  background: #514f50;
+  color: var(--secondary-bg-color);
+.nav--right{
+  @include section--width(32%, right)
+  margin-left: 2rem;
+  background: var(--primary-color);
+  color: var(--secondary-bg-color);
+  img{
+    width: 80%;
+    border-radius: 50%;
+    margin: 1rem 0;
+  }
+  .nav__infor{
+    padding:1rem;
+    background: #514f50;
+		.nav__infor--item:nth-child(n+5) i{
+				padding: .3rem .5rem;
+		}
+  }
+	.skill{
+		.skill--item{
+			.skill--item-title{
+				padding-bottom: 0;
+			}
+		}
+	}
+	.interests{
+		.interests__list{
+			padding-left: 1rem;
+			.interests__list--item{
+				list-style: circle;
+			}
+		}
+	}
+}
+.main--content{
+  @include section--width(68%, inherit)
+  .education{
+    .fa{
+      color: var(--secondary-bg-color);
+      padding: .3rem .7rem;
+    }
+    .education__college{
+      display: flex;
+      .education__college-school{
+        @include section--width(68%, inherit)
+      }
+      .education__college-cource{
+        @include section--width(32%, right)
+      }
+    }
+  }
+  .experience{
+    .fa {
+    color: var(--secondary-bg-color);
+    padding: .3rem;
+    }
+    .experience__worked{
+      display: flex;
+      .experience__worked-company{
+        @include section--width(68%, inherit)
+      }
+      .experience__worked-date{
+        @include section--width(32%, right)
+      }
+    }
+    ul li:before {
+    content: '\2713';
+    display: inline-block;
+    vertical-align: top;
+    width: 1em;
+    height: 1em;
+    margin-right: 0.3em;
+    text-align: center;
+    text-align: -webkit-center;
+    color: var(--primary-bg-color);
+    }
+    .link__web p{
+      color: var(--primary-bg-color);
+    }
+  }
+  .references{
+    .fa {
+    color: var(--secondary-bg-color);
+    padding: .3rem .5rem;
+    }
+  }
+}
+}
