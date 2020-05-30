@@ -1,26 +1,26 @@
 @font-face {
 	font-family:'Rig Bold Coarse';
-	src:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/Rig-BoldCoarse.otf');
+	src:url("../font/Rig-BoldCoarse.otf");
 }
 
 @font-face {
 	font-family:'Rig Bold Extrude';
-	src:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/Rig-BoldExtrude.otf');
+	src:url("../font/Rig-BoldExtrude.otf");
 }
 
 @font-face {
 	font-family:'Rig Bold Shadow';
-	src:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/Rig-BoldShadow.otf');
+	src:url("../font/Rig-BoldShadow.otf");
 }
 
 @font-face {
 	font-family:'Rig Bold Face';
-	src:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/Rig-BoldFace.otf');
+	src:url("../font/Rig-BoldFace.otf");
 }
 
 @font-face {
 	font-family:'Rig Bold Inline';
-	src:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/Rig-BoldInline.otf');
+	src:url("../font/Rig-BoldInline.otf");
 }
 
 $red: #fe4560;
@@ -131,8 +131,14 @@ span {
   .nav__infor{
     padding:1rem;
     background: #514f50;
-		.nav__infor--item:nth-child(n+5) i{
-				padding: .3rem .5rem;
+		.nav__infor--item{
+			i{
+				width: 1rem;
+				height: 1rem;
+				text-align: center;
+				background: var(--primary-bg-color);
+				border-radius: 50%;
+			}
 		}
   }
 	.skill{
@@ -204,4 +210,77 @@ span {
     }
   }
 }
+}
+
+
+// responsive divide mobile
+@media screen and (max-width: 1024px) {
+  .container {
+    max-width: 90%;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  /*Setup*/
+  body {
+    font-size: 18px;
+  }
+
+	.header{
+		.header--contain{
+			h1{
+				font-size: 1.7rem;
+				transform: translate(-84%, 0%);
+			}
+			.header-content{
+				transform: translate(-100%, 80%);
+			}
+		}
+	}
+
+}
+
+@media screen and (max-width: 438px) {
+
+  /*Setup*/
+  body {
+    transition: background-color .5s;
+    font-size: 16px;
+  }
+	progress {
+    width: 20em;
+}
+
+  .title--item {
+    font-size: 16px;
+  }
+	.header{
+		.header--contain{
+			h1{
+				font-size: 1.4rem;
+			}
+			.header-content{
+				transform: translate(-40%, 80%);
+			}
+		}
+	}
+
+	.main--contain{
+		.nav--right{
+			width: 100%;
+		}
+		.main--content{
+			width: 100%;
+			.experience {
+				.experience__worked{
+					margin-top: 2rem;
+				}
+			}
+		}
+	}
+span{
+		font-size: 1.4rem;
+}
+
 }
